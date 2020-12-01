@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<th:block th:fragment="head">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Siicore</title>
+</th:block>
+</head>
+<th:block th:replace="templates/table :: tablecss"></th:block>
+
+<body>
+
+	<footer th:fragment="footer">
+		<script th:src="@{/js/bootstrap.min.js}"></script>
+	</footer>
+</body>
+
+</html>

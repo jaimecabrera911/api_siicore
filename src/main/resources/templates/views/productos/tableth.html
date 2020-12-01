@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:insert="templates/table :: head"></th:block>
+    <th:block th:insert="templates/table :: tablecss"></th:block>
+</head>
+
+
+<body>
+
+    <table id="maintable" class="display compact cell-border" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>codigo</th>
+                <th>nombre_producto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="producto : ${productos}">
+                <td th:text="${producto.id_producto}"></td>
+                <td th:text="${producto.codigo}"></td>
+                <td th:text="${producto.nombre_producto}"></td>
+            </tr>
+        </tbody>
+        <tfoot style="background-color: #c0c0c0; color: #ffffff; font-size: 0.9em; ">
+            <tr>
+                <th>#</th>
+                <th>codigo</th>
+                <th>nombre_producto</th>
+            </tr>
+        </tfoot>    
+    </table>
+
+
+    <th:block th:insert="templates/table :: tablajs"></th:block>
+    <footer th:replace="templates/template :: footer"> </footer>
+
+
+</body>
+
+</html>

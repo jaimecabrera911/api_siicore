@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="templates/template :: head">
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <div id="app">
+        <table  class="example display compact cell-border" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>codigo</th>
+                    <th>nombre_producto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="product in info">
+                    <td >{{product.id_producto}}</td>
+                    <td>{{product.codigo}}</td>
+                    <td>{{product.nombre_producto}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer th:replace="templates/template :: footer"></footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"
+    integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ=="
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="/js/productos/producto.js"></script>
+<script type="text/javascript" th:src="@{/js/app.js}"></script>
+
+</html>
