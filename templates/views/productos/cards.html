@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="templates/template :: head">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<div id="app">
+		<h1 class="text-center">Productos</h1>
+		<div class="container">
+			<div class="row">
+				<div class="card col-md-3 p-3" v-for="product in info"
+					style="width: 18rem;">
+					<img class="card-img-top "
+						src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/taillight_yx0yve.png"
+						alt="taillight" v-if="product.catproductos.nombre=='STOPS'">
+					<img class="card-img-top "
+						src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/headlight_yb6ofd.jpg"
+						alt="headlight" v-if="product.catproductos.nombre=='FAROLAS'">
+					<img class="card-img-top "
+						src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/direccional_n5wcmr.png"
+						alt="direccional"
+						v-if="product.catproductos.nombre=='DIRECCIONALES'"> <img
+						class="card-img-top "
+						src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/mirrors_hf69kn.jpg"
+						alt="mirror" v-if="product.catproductos.nombre=='ESPEJOS'">
+					<img class="card-img-top "
+						src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/hood_cilo73.png"
+						alt="hood" v-if="product.catproductos.nombre=='CAPOTS'"> <img
+						class="card-img-top "
+						src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/bumper_p6rpkf.jpg"
+						alt="bomper" v-if="product.catproductos.nombre=='BOMPERES'">
+					<img class="card-img-top "
+						src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/grill_udux8z.jpg"
+						alt="grill" v-if="product.catproductos.nombre=='REJILLAS'">
+					<img class="card-img-top "
+						src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/guardafango_kx6ldk.png"
+						alt="taillight" v-if="product.catproductos.nombre=='GUARDAFANGOS'">
+					<img class="card-img-top "
+						src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/door_jsqdhc.png"
+						alt="taillight" v-if="product.catproductos.nombre=='PUERTAS'">
+					<img class="card-img-top "
+						src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606840737/condensador_nm0rgx.png"
+						alt="taillight" v-if="product.catproductos.nombre=='CONDENSADOR'">
+					<h5 class="card-title">{{product.nombre_producto}}</h5>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-6">
+								<span>Codigo:</span>
+								<p class="card-text">{{product.codigo}}</p>
+							</div>
+							<div class="col-md-6">
+								<span>Categoria:</span>
+								<p class="card-text">{{product.catproductos.nombre}}</p>
+							</div>
+							<div class="col-md-6">
+								<span>Marca:</span>
+								<p class="card-text">{{product.marca_producto}}</p>
+							</div>
+							<div class="col-md-6">
+								<span>Marca Coche:</span>
+								<p class="card-text">{{product.marca_coche}}</p>
+							</div>
+							<div class="col-md-6">
+								<span>Referencia:</span>
+								<p class="card-text">{{product.referencia}}</p>
+							</div>
+							<div class="col-md-6 mb-4">
+								<span>Modelo:</span>
+								<p class="card-text">{{product.modelo}}</p>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="btn btn-primary">Ver</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer th:replace="templates/template :: footer"></footer>
+</body>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"
+	integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ=="
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="/js/productos/producto.js"></script>
+
+</html>

@@ -26,5 +26,11 @@ public class ProductoController {
 		model.addAttribute("productos", productoService.listarTodo());
 		return "/views/productos/tableth";
 	}
+	
+	@GetMapping("/card")
+	public String listarCard(Model model) {
+		model.addAttribute("productos", productoService.listarTodo());
+		return "/views/productos/cards";
+	}
 
 }
