@@ -14,23 +14,90 @@
             <tr>
                 <th>#</th>
                 <th>codigo</th>
+                <th>descripcion</th>
+                <th>estado</th>
+                <th>imagen</th>
+                <th>lado</th>
+                <th>marca_coche</th>
+                <th>marca_producto</th>
+                <th>modelo</th>
                 <th>nombre_producto</th>
+                <th>precio_compra</th>
+                <th>precio_venta</th>
+                <th>referencia</th>
+                <th>stock</th>
+                <th>categoria</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="producto : ${productos}">
                 <td th:text="${producto.id_producto}"></td>
                 <td th:text="${producto.codigo}"></td>
+                <td th:text="${producto.descripcion}"></td>
+                <td th:text="${producto.estado}"></td>
+                <td><img class="card-img-top w-50 "
+                        src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/taillight_yx0yve.png"
+                        alt="taillight" th:if="${producto.catproductos.nombre=='STOPS'}">
+                    <img class="card-img-top w-50"
+                        src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/headlight_yb6ofd.jpg"
+                        alt="headlight" th:if="${producto.catproductos.nombre=='FAROLAS'}" >
+                    <img class="card-img-top w-50 "
+                        src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/direccional_n5wcmr.png"
+                        alt="direccional" th:if="${producto.catproductos.nombre=='DIRECCIONALES'}">
+                    <img class="card-img-top w-50"
+                        src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/mirrors_hf69kn.jpg"
+                        alt="mirror" th:if="${producto.catproductos.nombre=='ESPEJOS'}" >
+                    <img class="card-img-top w-50"
+                        src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/hood_cilo73.png"
+                        alt="hood" th:if="${producto.catproductos.nombre=='CAPOTS'}">
+                    <img class="card-img-top w-50"
+                        src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/bumper_p6rpkf.jpg"
+                        alt="bomper" th:if="${producto.catproductos.nombre=='BOMPERES'}" width="10px">
+                    <img class="card-img-top w-50"
+                        src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/grill_udux8z.jpg"
+                        alt="grill" th:if="${producto.catproductos.nombre=='REJILLAS'}" width="10px">
+                    <img class="card-img-top w-50"
+                        src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/guardafango_kx6ldk.png"
+                        alt="taillight" th:if="${producto.catproductos.nombre=='GUARDAFANGOS'}" width="10px">
+                    <img class="card-img-top w-50"
+                        src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606838822/door_jsqdhc.png"
+                        alt="taillight" th:if="${producto.catproductos.nombre=='PUERTAS'}" width="10px">
+                    <img class="card-img-top w-50"
+                        src="https://res.cloudinary.com/desarrolladorweb6/image/upload/v1606840737/condensador_nm0rgx.png"
+                        alt="taillight" th:if="${producto.catproductos.nombre=='CONDENSADOR'}" width="10px">
+                </td>
+                <td th:text="${producto.lado}"></td>
+                <td th:text="${producto.marca_coche}"></td>
+                <td th:text="${producto.marca_producto}"></td>
+                <td th:text="${producto.modelo}"></td>
                 <td th:text="${producto.nombre_producto}"></td>
+                <td th:text="${producto.precio_compra}"></td>
+                <td th:text="${producto.precio_venta}"></td>
+                <td th:text="${producto.referencia}"></td>
+                <td th:text="${producto.stock}"></td>
+                <td th:text="${producto.catproductos.nombre}"></td>
+
             </tr>
         </tbody>
-        <tfoot style="background-color: #c0c0c0; color: #ffffff; font-size: 0.9em; ">
+        <tfoot style="background-color: #c0c0c0; color: #ffffff; font-size: 0.9em;">
             <tr>
                 <th>#</th>
                 <th>codigo</th>
+                <th>descripcion</th>
+                <th>estado</th>
+                <th>imagen</th>
+                <th>lado</th>
+                <th>marca_coche</th>
+                <th>marca_producto</th>
+                <th>modelo</th>
                 <th>nombre_producto</th>
+                <th>precio_compra</th>
+                <th>precio_venta</th>
+                <th>referencia</th>
+                <th>stock</th>
+                <th>categoria</th>
             </tr>
-        </tfoot>    
+        </tfoot>
     </table>
 
 
